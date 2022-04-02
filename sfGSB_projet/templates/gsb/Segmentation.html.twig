@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Bienvenue sur le site !  {% endblock %}
+{% block image %}
+    <h1 class="blueTitle">Segmentation</h1>
+    
+    
+    <p class="color-beige">L'organisation des VLAN et de l'adressage IP est la suivante : </p>
+    <br>
+    
+     <img src="{{asset('Images/segmentation.PNG')}}" alt="orgaa">
+    
+      
+               
+    
+{% endblock %}
+{% block Contenu %}
+     <p class="redTitle">Les règles actuelles concernant les vlans sont les suivantes :</p>
+        <ol>
+            <li class="color-beige">chaque vlan (sauf le vlan visiteur) peut uniquement accéder (quel que soit le protocole) aux
+vlans "Serveurs" et "Sortie";</li>
+            <li class="color-beige">le vlan "Visiteurs" peut uniquement interroger les serveur DNS et DHCP et sortir sur internet </li>
+            
+       </ol>
+ {% endblock %}

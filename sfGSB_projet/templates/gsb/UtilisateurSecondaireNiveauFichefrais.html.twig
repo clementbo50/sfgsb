@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Bienvenue sur le site !  {% endblock %}
+  
+{% block Contenu %}
+{%  if listeNomUtilisateurSecondaire is empty %}
+        <h3 style="text-align: center; margin-top: 1em;">Aucun Utilisateur</h1>
+    {% else %}
+        {% for unUtilisateurSecondaire in listeNomUtilisateurSecondaire %}
+        
+         
+         <p class="color-beige">id fiche frais : {{ unUtilisateurSecondaire.idFicheFrais.id}}</p>
+        <p class="color-beige">Nom l'utilisateur Principal : {{ unUtilisateurSecondaire.idFicheFrais.idutilisateur.nom }}</p>
+        <p class="color-beige">Prénom de l'Utilisateur Principal : {{ unUtilisateurSecondaire.idFicheFrais.idutilisateur.prenom }}</p>
+        <p class="color-beige">Nom de l'utilisateur secondaire : {{ unUtilisateurSecondaire.idUser.nom }}</p>
+       <p class="color-beige">Prénom de l'utilisateurs secondaire : {{ unUtilisateurSecondaire.idUser.prenom }}</p>
+       <p class="color-beige">Niveau de l'utilisateur secondaire : {{ unUtilisateurSecondaire.niveaux }}</p>
+       <br>
+         
+        {% endfor %}
+        
+        
+        
+        
+    
+       
+      
+    {% endif %}
+ 
+{% endblock %}

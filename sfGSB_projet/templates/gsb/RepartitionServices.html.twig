@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Bienvenue sur le site !  {% endblock %}
+{% block image %}
+<div class='imgOrga'>
+     <img src="{{asset('Images/OrganisationGSB-1.PNG')}}" alt="orga">
+    </div>
+{% endblock %}
+{% block Contenu %}
+    
+    <h1 class='redTitle'>Organisation du réseau</h1>
+ 
+  
+    <h2 class='blueTitle'>Répartition des services</h1>
+    
+    <p class='color-beige'>
+     Chaque étage dispose d'une baie de
+brassage qui le relie par une fibre à la
+baie centrale de la salle serveurs.
+    </p>
+    <p class='color-beige'>
+    Toutes les salles de réunion sont
+équipées d'un point d'accès Wifi
+positionné par défaut dans le VLAN
+"Visiteurs" qui autorise uniquement un
+accès Internet.
+    </p>
+    
+    <p class='color-beige'>
+        Les portables connectés en wifi à ce
+point d'accès reçoivent ainsi une
+adresse IP et n'ont, par conséquent
+accès qu'aux services DHCP et DNS.
+    </p>
+    <p class='color-beige'>
+    Le point d’accès peut être configuré à
+la demande pour être raccordé à un
+VLAN présent au niveau de l'étage.
+    </p>
+    <p class='color-beige'>
+        Chaque salle de réunion dispose d'un
+vidéoprojecteur, d'enceintes et d'un
+tableau numérique interactif.
+    </p>    
+    <p class='color-beige'>
+        La salle "Démonstration" est destinée à
+l'accueil des organismes de santé
+(AFSSAPS notamment) et des
+partenaires scientifiques. Elle dispose
+de paillasses et d'équipements de
+laboratoire, en plus d'une salle de
+réunion.
+    </p>
+{% endblock %}
