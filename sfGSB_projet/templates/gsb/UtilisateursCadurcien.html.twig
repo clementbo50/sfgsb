@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Bienvenue sur le site !  {% endblock %}
+  
+{% block Contenu %}
+ 
+{%  if listeUtilisateursCadurciens is empty %}
+        <h3 style="text-align: center; margin-top: 1em;">Aucun Utilisateur</h1>
+    {% else %}
+        {% for unUtilisateur in listeUtilisateursCadurciens %}
+        <h1> utilisateur {{ unUtilisateur.id}} : </h1>
+        <p>{{ unUtilisateur.nom}}</p>
+        <p>{{ unUtilisateur.prenom}}</p>
+        <p>{{ unUtilisateur.adresse}}</p>
+        <p>{{ unUtilisateur.cp}}</p>
+        <p>{{ unUtilisateur.ville}}</p>
+        <p>                   </p>
+        {% endfor %}
+    {% endif %} 
+ 
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Bienvenue sur le site !  {% endblock %}
+  
+{% block Contenu %}
+{%  if listeUserAyantFrais is empty %}
+        <h3 style="text-align: center; margin-top: 1em;">Aucun Utilisateur</h1>
+    {% else %}
+        {% for unUtilisateur in listeUserAyantFrais %}
+         <div class="UtilisateurAffichage">
+        <h1 class="blueTitle"> utilisateur {{ unUtilisateur.id}} : </h1>
+        <p class="color-beige">Nom : {{ unUtilisateur.nom}}</p>
+        <p class="color-beige">Prenom : {{ unUtilisateur.prenom}}</p>
+        <p class="color-beige">Montant total valide : {{ unUtilisateur.1}}</p>
+        
+        
+        
+        
+         </div> 
+        {% endfor %}
+      
+    {% endif %}
+ 
+{% endblock %}

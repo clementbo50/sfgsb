@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+       <link rel="stylesheet" href="{{asset('/css/bootstrap.css')}}">
+       <link rel="stylesheet" href="{{asset('styleGSB.css')}}">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+  {% block Menu %}
+      
+    <body class="body">
+      <div class="en-tete-couleur">
+        <div class="container">
+           
+            <nav>
+             <ul>
+               <li class="menu-deroulant">
+                 <a href="#">Le SI</a>
+                 <ul class="sous-menu">
+                   <li><a href="Accueil">Description du laboratoire GSB</a></li>
+                   <li><a href="GestionInformatique">La gestion informatique</a></li>
+                   <li><a href="Equipements">L'équipement</a></li>
+                 </ul>
+               </li>
+               <li class="menu-deroulant">
+                 <a href="#">Le Réseau</a>
+                 <ul class="sous-menu"> 
+                   <li><a href="RepartitionServices">Répartition des services</a></li>
+                   <li><a href="Segmentation">segmentation</a></li>
+                 </ul>
+               </li>    
+               <li class="menu-deroulant">
+                   <a href="Utilisateurs">Les utilisateurs</a>
+                   <ul class="sous-menu">
+                       <li><a href="UtilisateursCadurciens">Utilisateurs Carduciens</a></li>
+                       <li><a href="UtilisateursAyantFrais">Ayant des frais</a></li>
+                       <li><a href="UtilisateursNAyantPasDeFrais">N'ayant pas de frais</a></li>
+                       <li><a href="UtilisateursNombreFrais">Nombre de frais </a></li>
+                
+             </ul>
+               </li>
+                <li class="menu-deroulant">
+                 <a href="#">Domaines et leurs catégories</a>
+                 <ul class="sous-menu"> 
+                   <li><a href="NomDomaineCategorie">Nom du domaine et leur catégorie</a></li>
+                  
+                 </ul>
+               </li>   
+               
+           </nav>
+           {% endblock %}
+           <br>
+           {% block image %}{% endblock %}
+           {% block utilisateur %}{% endblock %}
+            <div class="col-9">
+                    <div class="contenu">
+                    {% block Contenu %}   
+                        <h1 class='redTitle'> Description du laboratoire GSB </h1>
+                            <br>
+                            <h2 class='blueTitle'>Le secteur d'activité</h2>
+                                <p class='color-beige'>
+                                    L’industrie pharmaceutique est un secteur très lucratif dans lequel le mouvement de fusion acquisition est très fort. 
+                                    <br>
+                                    Les regroupements de laboratoires ces dernières années ont donné naissance à des entités gigantesques au sein desquelles le travail est longtemps resté organisé selon les anciennes.
+                                    <br>
+                                    Des déboires divers récents autour de médicaments ou molécules ayant entraîné des complications médicales ont fait s'élever des voix contre une partie de l'activité des laboratoires : la visite médicale, réputée être le lieu d' arrangements entre l'industrie et les praticiens, et tout du moins un terrain d'influence opaque.
+                                    <br>
+                                </p>
+                                <h2 class='blueTitle'>L'entreprise</h2>
+                                <p class='color-beige'>
+                                    <br>
+                                    Le laboratoire Galaxy Swiss Bourdin (GSB) est issu de la fusion entre le géant américain Galaxy (spécialisé dans le secteur des maladies virales dont le SIDA et les hépatites) et le conglomérat européen Swiss Bourdin (travaillant sur des médicaments plus conventionnels), lui même déjà union de trois petits laboratoires .
+                                    <br>
+                                    En 2009, les deux géants pharmaceutiques ont uni leurs forces pour créer un leader de ce secteur industriel.
+                                    L'entité Galaxy Swiss Bourdin Europe a établi son siège administratif à Paris. 
+                                    Le siège social de la multinationale est situé à Philadelphie, Pennsylvanie, aux Etats-Unis.
+                                </p>
+                                <p class='redTitle'>
+                                 La France a été choisie comme témoin pour l'amélioration du suivi de l'activité de visite.
+                                </p>
+                                <h1 class='blueTitle'>Réorganisation</h1> 
+                                <p class='color-beige'>
+                                 Une conséquence de cette fusion, est la recherche d'une optimisation de l’activité du groupe ainsi constitué en réalisant des économies d’échelle dans la production et la distribution des médicaments (en passant par une nécessaire restructuration et vague de licenciement), tout en prenant le meilleur
+                                 des deux laboratoires sur les produits concurrents.
+                                </p>
+                                <p class='color-beige'>
+                                  L'entreprise compte 480 visiteurs médicaux en France métropolitaine (Corse comprise), et 60 dans les
+départements et territoires d'outre-mer. Les territoires sont répartis en 6 secteurs géographiques
+(Paris-Centre, Sud, Nord, Ouest, Est, DTOM Caraïbes-Amériques, DTOM Asie-Afrique).
+Une vision partielle de cette organisation est présentée ci-dessous.      
+                                </p>
+                                <img src="{{asset('Images/carteGSB-1.PNG')}}" alt="le logo">
+                                <p class='redTitle'>
+                                    Après deux années de réorganisations internes, tant au niveau du personnel que du
+                                    fonctionnement administratif, l'entreprise GSB souhaite moderniser l'activité de visite
+                                    médicale.
+                                </p>
+                    {% endblock %}
+                    </div>
+                </div>
+       
+           
+                
+            </div> 
+        </div>
+  
+     
+    </body>
+</html>
